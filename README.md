@@ -4,10 +4,15 @@ QueryString / Path Binder for Play 2.x
 
 ## Usage
 
-Add routesImport to your Build.scala
+Add dependency and routesImport to your Build.scala
 
 ```scala
-routesImport += "com.github.tototoshi.play2.routes.JodaRoutes._"
+  val main = play.Project(appName, appVersion, appDependencies).settings(
+    libraryDependencies ++= Seq(
+      "com.github.tototoshi" %% "play-joda-routes-binder" % "0.1.0"
+    ),
+    routesImport += "com.github.tototoshi.play2.routes.JodaRoutes._"
+  )
 ```
 
 Now you can bind query string and path parameters to LocalDate and DateTime.
