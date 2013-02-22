@@ -1,5 +1,7 @@
 # play-joda-routes-binder
 
+[![Build Status](https://travis-ci.org/tototoshi/play-joda-routes-binder.png)](https://travis-ci.org/tototoshi/play-joda-routes-binder)
+
 QueryString / Path Binder for Play 2.x
 
 ## Usage
