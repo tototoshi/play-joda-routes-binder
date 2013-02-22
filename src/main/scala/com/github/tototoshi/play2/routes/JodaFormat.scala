@@ -15,8 +15,11 @@
  */
 package com.github.tototoshi.play2.routes
 
-trait JodaRoutes extends JodaLocalDateRoutes
-  with JodaDateTimeRoutes
-  with DefaultJodaFormat
+trait JodaFormat {
+  val format: String
+}
 
-object JodaRoutes extends JodaRoutes
+trait DefaultJodaFormat extends JodaFormat {
+  val format = "yyyyMMdd"
+}
+

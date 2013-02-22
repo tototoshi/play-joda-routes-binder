@@ -7,7 +7,7 @@ QueryString / Path Binder for Play 2.x
 Add routesImport to your Build.scala
 
 ```scala
-routesImport += "com.github.tototoshi.play2.routes.JodaRoutesImports._"
+routesImport += "com.github.tototoshi.play2.routes.JodaRoutes._"
 ```
 
 Now you can bind query string and path parameters to LocalDate and DateTime.
@@ -15,7 +15,7 @@ Now you can bind query string and path parameters to LocalDate and DateTime.
 
 conf/routes
 ```
-GET       /list       controllers.Application.index(date: org.joda.time.LocalDate)
+GET     /list                 controllers.Application.index(date: org.joda.time.LocalDate)
 GET     /entry/$date<[0-9]+>  controllers.Application.entry(date: org.joda.time.LocalDate)
 ```
 
@@ -25,19 +25,13 @@ Default format of LocalDate and DateTime is 'yyyyMMdd'. You can override this be
 ```scala
 package example
 
-object MyRoutesImports {
-  implicit val myJodaImports = new JodaRoutesImports {
+object MyRoutes {
+  implicit val myJodaRoutes = new JodaRoutes {
     override val format: String = "yyMMdd"
   }
 }
 ```
 
 ```scala
-routesImport += "example.MyRoutesImports._"
+routesImport += "example.MyRoutes._"
 ```
-
-
-
-
-
-
