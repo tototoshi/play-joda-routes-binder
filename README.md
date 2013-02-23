@@ -38,7 +38,7 @@ object MyRoutes {
 ```
 
 ```scala
-routesImport += "example.MyRoutes._"
+routesImport += "example.MyRoutes.myJodaRoutes._"
 ```
 
 
