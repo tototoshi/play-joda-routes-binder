@@ -31,7 +31,7 @@ Add the customized binder to your Build.scala
 package example
 
 object MyRoutes {
-  implicit val myJodaRoutes = new JodaRoutes {
+  val myJodaRoutes = new JodaRoutes {
     override val format: String = "yyMMdd"
   }
 }
