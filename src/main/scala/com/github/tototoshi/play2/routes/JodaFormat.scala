@@ -16,7 +16,7 @@
 package com.github.tototoshi.play2.routes
 
 trait JodaFormat {
-  def format: String
+  val format: String
 }
 
 trait DefaultJodaFormat extends JodaFormat {
@@ -24,9 +24,18 @@ trait DefaultJodaFormat extends JodaFormat {
 }
 
 trait JodaYearMonthFormat {
-  def yearMonthFormat: String
+  val yearMonthFormat: String
 }
 
 trait DefaultJodaYearMonthFormat extends JodaYearMonthFormat {
   val yearMonthFormat = "yyyyMM"
 }
+
+trait JodaMonthDayFormat {
+  val monthDayFormat: String
+}
+
+trait DefaultJodaMonthDayFormat extends JodaMonthDayFormat {
+  val monthDayFormat = "MMdd"
+}
+
