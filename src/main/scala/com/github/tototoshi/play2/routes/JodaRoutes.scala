@@ -17,6 +17,8 @@ package com.github.tototoshi.play2.routes
 
 trait JodaRoutes extends JodaLocalDateRoutes
   with JodaDateTimeRoutes
+  with JodaYearMonthRoutes
   with DefaultJodaFormat
+  with DefaultJodaYearMonthFormat
 
 object JodaRoutes extends JodaRoutes
