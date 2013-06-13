@@ -15,7 +15,7 @@
  */
 package com.github.tototoshi.play2.routes
 
-import play.api.mvc.{PathBindable, QueryStringBindable}
+import play.api.mvc.{ PathBindable, QueryStringBindable }
 import org.joda.time.YearMonth
 import org.joda.time.format.DateTimeFormat
 
