@@ -24,13 +24,13 @@ trait JodaYearMonthRoutes { self: JodaYearMonthFormat =>
   implicit object queryStringYearMonthBinder extends QueryStringBindable.Parsing[YearMonth](
     YearMonth.parse(_, DateTimeFormat.forPattern(yearMonthFormat)),
     _.toString(yearMonthFormat),
-    (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.DateTime: %s".format(key, e.getMessage)
+    (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.YearMonth: %s".format(key, e.getMessage)
   )
 
   implicit object pathYearMonthBinder extends PathBindable.Parsing[YearMonth](
     YearMonth.parse(_, DateTimeFormat.forPattern(yearMonthFormat)),
     _.toString(yearMonthFormat),
-    (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.DateTime: %s".format(key, e.getMessage)
+    (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.YearMonth: %s".format(key, e.getMessage)
   )
 
 }
