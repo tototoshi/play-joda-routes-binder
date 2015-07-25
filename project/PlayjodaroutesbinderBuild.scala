@@ -9,16 +9,16 @@ object PlayjodaroutesbinderBuild extends Build {
     settings = Project.defaultSettings ++ Seq(
       name := "play-joda-routes-binder",
       organization := "com.github.tototoshi",
-      version := "0.2.0-SNAPSHOT",
-      scalaVersion := "2.10.0",
+      version := "1.0.0-SNAPSHOT",
+      scalaVersion := "2.11.7",
       scalacOptions ++= Seq("-feature", "-deprecation"),
       resolvers ++= Seq(
         "typesafe" at "http://repo.typesafe.com/typesafe/releases"
       ),
       libraryDependencies ++= Seq(
-        "play" %% "play" % "2.1.0" % "provided",
-        "play" %% "play-test" % "2.1.0" % "test",
-        "org.scalatest" %% "scalatest" % "1.9.1" % "test"
+        "com.typesafe.play" %% "play" % "2.4.0" % "provided",
+        "com.typesafe.play" %% "play-test" % "2.4.0" % "test",
+        "org.scalatest" %% "scalatest" % "2.2.4" % "test"
       )
     ) ++ publishingSettings
   )
