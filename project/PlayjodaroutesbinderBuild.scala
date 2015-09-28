@@ -10,6 +10,7 @@ object PlayjodaroutesbinderBuild extends Build {
       name := "play-joda-routes-binder",
       organization := "com.github.tototoshi",
       version := "1.0.0-SNAPSHOT",
+      crossScalaVersions := Seq("2.11.7", "2.10.5"),
       scalaVersion := "2.11.7",
       scalacOptions ++= Seq("-feature", "-deprecation"),
       resolvers ++= Seq(
