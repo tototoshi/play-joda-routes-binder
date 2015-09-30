@@ -31,7 +31,7 @@ Add the customized binder to your Build.scala
 package example
 
 object MyRoutes {
-  val myJodaRoutes = new JodaRoutes {
+  val myJodaRoutes = new com.github.tototoshi.play2.routes.JodaRoutes {
     override val format: String = "yyMMdd"
   }
 }
