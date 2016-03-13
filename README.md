@@ -11,7 +11,7 @@ Add dependency and routesImport to your Build.scala
 ```scala
   val main = play.Project(appName, appVersion, appDependencies).settings(
     libraryDependencies ++= Seq(
-      "com.github.tototoshi" %% "play-joda-routes-binder" % "1.0.0"
+      "com.github.tototoshi" %% "play-joda-routes-binder" % "1.1.0-SNAPSHOT"
     ),
     routesImport += "com.github.tototoshi.play2.routes.JodaRoutes._"
   )
