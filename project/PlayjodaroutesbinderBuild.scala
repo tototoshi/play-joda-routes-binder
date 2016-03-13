@@ -3,6 +3,8 @@ import sbt.Keys._
 
 object PlayjodaroutesbinderBuild extends Build {
 
+  val playVersion = "2.5.0"
+
   lazy val playjodaroutesbinder = Project(
     id = "play-joda-routes-binder",
     base = file("."),
@@ -10,15 +12,14 @@ object PlayjodaroutesbinderBuild extends Build {
       name := "play-joda-routes-binder",
       organization := "com.github.tototoshi",
       version := "1.1.0-SNAPSHOT",
-      crossScalaVersions := Seq("2.11.8", "2.10.5"),
       scalaVersion := "2.11.8",
       scalacOptions ++= Seq("-feature", "-deprecation"),
       resolvers ++= Seq(
         "typesafe" at "http://repo.typesafe.com/typesafe/releases"
       ),
       libraryDependencies ++= Seq(
-        "com.typesafe.play" %% "play" % "2.4.0" % "provided",
-        "com.typesafe.play" %% "play-test" % "2.4.0" % "test",
+        "com.typesafe.play" %% "play" % playVersion % "provided",
+        "com.typesafe.play" %% "play-test" % playVersion % "test",
         "org.scalatest" %% "scalatest" % "2.2.4" % "test"
       )
     ) ++ publishingSettings
