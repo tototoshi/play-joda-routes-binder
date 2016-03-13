@@ -1,8 +1,7 @@
 package com.github.tototoshi.play2.routes
 
-import org.scalatest.FunSpec
-import org.scalatest.matchers._
 import org.joda.time._
+import org.scalatest.{ FunSpec, ShouldMatchers }
 
 class JodaDateTimeRoutesSpec extends FunSpec with ShouldMatchers {
 
