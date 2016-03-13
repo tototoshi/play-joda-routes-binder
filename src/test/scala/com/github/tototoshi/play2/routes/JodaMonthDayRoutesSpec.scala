@@ -4,7 +4,6 @@ import org.scalatest.FunSpec
 import org.scalatest.matchers.ShouldMatchers
 import org.joda.time.MonthDay
 
-
 class JodaMonthDayRoutesSpec extends FunSpec with ShouldMatchers {
 
   describe("JodaMonthDayRoutes") {
