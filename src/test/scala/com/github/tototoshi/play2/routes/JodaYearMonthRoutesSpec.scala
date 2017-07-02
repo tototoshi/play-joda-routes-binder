@@ -1,9 +1,9 @@
 package com.github.tototoshi.play2.routes
 
 import org.joda.time.YearMonth
-import org.scalatest.{ FunSpec, ShouldMatchers }
+import org.scalatest.{ FunSpec, Matchers }
 
-class JodaYearMonthRoutesSpec extends FunSpec with ShouldMatchers {
+class JodaYearMonthRoutesSpec extends FunSpec with Matchers {
 
   describe("JodaYearMonthRoutes") {
     describe("queryStringLocalDateBinder") {

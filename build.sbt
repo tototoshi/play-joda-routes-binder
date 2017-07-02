@@ -15,7 +15,7 @@ lazy val `play-joda-routes-binder` = project
     libraryDependencies ++= Seq(
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test",
-      "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+      "org.scalatest" %% "scalatest" % "3.0.1" % "test"
     )
   )
 
