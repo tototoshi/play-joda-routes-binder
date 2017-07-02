@@ -1,4 +1,7 @@
-val playVersion = "2.5.0"
+val playVersion = "2.6.0"
+
+val scalaVersion_2_11 = "2.11.8"
+val scalaVersion_2_12 = "2.12.2"
 
 lazy val `play-joda-routes-binder` = project
   .in(file("."))
@@ -7,7 +10,8 @@ lazy val `play-joda-routes-binder` = project
     name := "play-joda-routes-binder",
     organization := "com.github.tototoshi",
     version := "1.2.0-SNAPSHOT",
-    scalaVersion := "2.11.8",
+    scalaVersion := scalaVersion_2_12,
+    crossScalaVersions := Seq(scalaVersion_2_12, scalaVersion_2_11),
     scalacOptions ++= Seq("-feature", "-deprecation"),
     resolvers ++= Seq(
       "typesafe" at "http://repo.typesafe.com/typesafe/releases"
