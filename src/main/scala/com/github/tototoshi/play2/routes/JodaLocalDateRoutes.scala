@@ -22,8 +22,6 @@ import play.api.mvc._
 
 trait JodaLocalDateRoutes { self: JodaFormat =>
 
-  val format: String
-
   implicit object queryStringLocalDateBinder extends QueryStringBindable.Parsing[LocalDate](
     dateString => DateTimeFormat.forPattern(format).parseLocalDate(dateString),
     _.toString(format),
