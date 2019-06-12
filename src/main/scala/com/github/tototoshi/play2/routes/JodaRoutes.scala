@@ -19,7 +19,8 @@ trait JodaRoutes extends JodaLocalDateRoutes
   with JodaDateTimeRoutes
   with JodaYearMonthRoutes
   with JodaMonthDayRoutes
-  with DefaultJodaFormat
+  with DefaultJodaLocalDateFormat
+  with DefaultJodaDateTimeFormat
   with DefaultJodaYearMonthFormat
   with DefaultJodaMonthDayFormat
 
