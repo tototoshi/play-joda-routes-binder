@@ -11,7 +11,7 @@ lazy val `play-joda-routes-binder` = project
   .settings(
     name := "play-joda-routes-binder",
     organization := "com.github.tototoshi",
-    version := "1.3.0",
+    version := "1.3.1-SNAPSHOT",
     scalaVersion := scalaVersion_2_12,
     crossScalaVersions := Seq(scalaVersion_2_12, scalaVersion_2_11),
     scalacOptions ++= Seq("-feature", "-deprecation"),

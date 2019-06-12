@@ -20,21 +20,21 @@ import org.joda.time.format.DateTimeFormat
 import java.net.URLEncoder
 import play.api.mvc._
 
-trait JodaDateTimeRoutes { self: JodaFormat =>
+trait JodaDateTimeRoutes { self: JodaDateTimeFormat =>
 
   implicit object queryStringDateTimeBinder extends QueryStringBindable.Parsing[DateTime](
-    dateString => DateTimeFormat.forPattern(format).parseDateTime(dateString),
-    _.toString(format),
+    dateString => DateTimeFormat.forPattern(dateTimeFormat).parseDateTime(dateString),
+    _.toString(dateTimeFormat),
     (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.DateTime: %s".format(key, e.getMessage)
   )
 
   implicit object pathDateTimeBinder extends PathBindable.Parsing[DateTime](
-    dateString => DateTimeFormat.forPattern(format).parseDateTime(dateString),
-    _.toString(format),
+    dateString => DateTimeFormat.forPattern(dateTimeFormat).parseDateTime(dateString),
+    _.toString(dateTimeFormat),
     (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.DateTime: %s".format(key, e.getMessage)
   )
 
 }
 
 object JodaDateTimeRoutes extends JodaDateTimeRoutes
-  with DefaultJodaFormat
+  with DefaultJodaDateTimeFormat

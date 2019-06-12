@@ -20,23 +20,21 @@ import org.joda.time.format.DateTimeFormat
 import java.net.URLEncoder
 import play.api.mvc._
 
-trait JodaLocalDateRoutes { self: JodaFormat =>
-
-  val format: String
+trait JodaLocalDateRoutes { self: JodaLocalDateFormat =>
 
   implicit object queryStringLocalDateBinder extends QueryStringBindable.Parsing[LocalDate](
-    dateString => DateTimeFormat.forPattern(format).parseLocalDate(dateString),
-    _.toString(format),
+    dateString => DateTimeFormat.forPattern(localDateFormat).parseLocalDate(dateString),
+    _.toString(localDateFormat),
     (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.LocalDate: %s".format(key, e.getMessage)
   )
 
   implicit object pathLocalDateBinder extends PathBindable.Parsing[LocalDate](
-    dateString => DateTimeFormat.forPattern(format).parseLocalDate(dateString),
-    _.toString(format),
+    dateString => DateTimeFormat.forPattern(localDateFormat).parseLocalDate(dateString),
+    _.toString(localDateFormat),
     (key: String, e: Exception) => "Cannot parse parameter %s as org.joda.time.LocalDate: %s".format(key, e.getMessage)
   )
 
 }
 object JodaLocalDateRoutes extends JodaLocalDateRoutes
-  with DefaultJodaFormat
+  with DefaultJodaLocalDateFormat
 
