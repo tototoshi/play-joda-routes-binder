@@ -1,8 +1,8 @@
 import scalariform.formatter.preferences._
 
-val playVersion = "2.7.0"
+val playVersion = "2.8.0"
 
-val scalaVersion_2_11 = "2.11.12"
+val scalaVersion_2_13 = "2.13.1"
 val scalaVersion_2_12 = "2.12.8"
 
 lazy val `play-joda-routes-binder` = project
@@ -12,8 +12,8 @@ lazy val `play-joda-routes-binder` = project
     name := "play-joda-routes-binder",
     organization := "com.github.tototoshi",
     version := "1.4.0-SNAPSHOT",
-    scalaVersion := scalaVersion_2_12,
-    crossScalaVersions := Seq(scalaVersion_2_12, scalaVersion_2_11),
+    scalaVersion := scalaVersion_2_13,
+    crossScalaVersions := Seq(scalaVersion_2_13, scalaVersion_2_12),
     scalacOptions ++= Seq("-feature", "-deprecation"),
     resolvers ++= Seq(
       "typesafe" at "http://repo.typesafe.com/typesafe/releases"
@@ -21,7 +21,7 @@ lazy val `play-joda-routes-binder` = project
     libraryDependencies ++= Seq(
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test",
-      "org.scalatest" %% "scalatest" % "3.0.6" % "test"
+      "org.scalatest" %% "scalatest" % "3.1.0" % "test"
     ),
     scalariformPreferences := scalariformPreferences.value
       .setPreference(AlignSingleLineCaseStatements, true)
