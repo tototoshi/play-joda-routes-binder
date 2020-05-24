@@ -1,7 +1,5 @@
 import scalariform.formatter.preferences._
 
-val version = "1.4.0-SNAPSHOT"
-
 val playVersion = "2.8.1"
 
 val scalaVersion_2_13 = "2.13.2"
@@ -12,7 +10,7 @@ lazy val `play-joda-routes-binder` = project
   .settings(
     name := "play-joda-routes-binder",
     organization := "com.github.tototoshi",
-    version := version,
+    version := "1.4.0-SNAPSHOT",
     scalaVersion := scalaVersion_2_13,
     crossScalaVersions := Seq(scalaVersion_2_13),
     scalacOptions ++= Seq("-feature", "-deprecation"),
