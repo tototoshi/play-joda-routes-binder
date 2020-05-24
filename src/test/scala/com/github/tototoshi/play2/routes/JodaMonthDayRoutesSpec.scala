@@ -1,9 +1,10 @@
 package com.github.tototoshi.play2.routes
 
 import org.joda.time.MonthDay
-import org.scalatest.{ FunSpec, Matchers }
+import org.scalatest.funspec.AnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class JodaMonthDayRoutesSpec extends FunSpec with Matchers {
+class JodaMonthDayRoutesSpec extends AnyFunSpec with Matchers {
 
   describe("JodaMonthDayRoutes") {
     describe("queryStringLocalDateBinder") {
