@@ -15,9 +15,6 @@ lazy val `play-joda-routes-binder` = project
     scalaVersion := scalaVersion_2_13,
     crossScalaVersions := Seq(scalaVersion_2_13, scalaVersion_2_12),
     scalacOptions ++= Seq("-feature", "-deprecation"),
-    resolvers ++= Seq(
-      "typesafe" at "http://repo.typesafe.com/typesafe/releases"
-    ),
     libraryDependencies ++= Seq(
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test",
