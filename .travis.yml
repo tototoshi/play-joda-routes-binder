@@ -1,6 +1,0 @@
-language: scala
-scala:
-  - 2.12.2
-  - 2.13.1
-jdk:
-  - openjdk8
