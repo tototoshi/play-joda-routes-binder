@@ -1,6 +1,6 @@
 import scalariform.formatter.preferences._
 
-val playVersion = "2.8.0"
+val playVersion = "2.8.7"
 
 val scalaVersion_2_13 = "2.13.1"
 val scalaVersion_2_12 = "2.12.8"
@@ -18,7 +18,7 @@ lazy val `play-joda-routes-binder` = project
     libraryDependencies ++= Seq(
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test",
-      "org.scalatest" %% "scalatest" % "3.1.0" % "test"
+      "org.scalatest" %% "scalatest" % "3.1.4" % "test"
     ),
     scalariformPreferences := scalariformPreferences.value
       .setPreference(AlignSingleLineCaseStatements, true)
