@@ -18,7 +18,7 @@ lazy val `play-joda-routes-binder` = project
     libraryDependencies ++= Seq(
       "com.typesafe.play" %% "play" % playVersion % "provided",
       "com.typesafe.play" %% "play-test" % playVersion % "test",
-      "org.scalatest" %% "scalatest" % "3.2.8" % "test"
+      "org.scalatest" %% "scalatest" % "3.2.9" % "test"
     ),
     scalariformPreferences := scalariformPreferences.value
       .setPreference(AlignSingleLineCaseStatements, true)
