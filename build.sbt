@@ -1,6 +1,6 @@
 import scalariform.formatter.preferences._
 
-val playVersion = "2.8.9"
+val playVersion = "2.8.10"
 
 val scalaVersion_2_13 = "2.13.7"
 val scalaVersion_2_12 = "2.12.15"
