@@ -2,7 +2,7 @@ import scalariform.formatter.preferences._
 
 val playVersion = "2.8.20"
 
-val scalaVersion_2_13 = "2.13.11"
+val scalaVersion_2_13 = "2.13.12"
 val scalaVersion_2_12 = "2.12.18"
 
 lazy val `play-joda-routes-binder` = project
